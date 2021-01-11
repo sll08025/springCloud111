@@ -19,6 +19,7 @@ public class TestEurekaClientController {
     @GetMapping
     public String test(String name){
         return  "eureka成功，参数:"+name;
+        //test方法
     }
     @GetMapping(value = "obj")
     public String test2(UserEntity entity){
