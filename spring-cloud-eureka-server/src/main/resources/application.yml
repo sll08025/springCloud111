@@ -1,0 +1,26 @@
+server:
+  port: 8761 # eureka server 默认端口号
+
+spring:
+  application:
+    name: eureka-server #理论上应该大写(大写和小写都可以,但是如果你要是小写的话 他会自动将小写转换成大写)
+
+eureka:
+  client:
+    # eureka服务url,值为map集合默认key为defaultZone
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+    # 当前服务是否同时注册(我是不是需要将当前服务也注册到注册中心,自己注册自己[真实的环境下是需要,eureka 挂了怎么办])
+    register-with-eureka: false
+    # 去注册中心获取其他服务的地址
+    fetch-registry: false
+  instance: #实例
+    hostname: localhost
+    # 定义服务续约任务（心跳）的调用间隔，单位：秒 默认30
+    lease-renewal-interval-in-seconds: 1
+    # 定义服务失效的时间，单位：秒 默认90
+    lease-expiration-duration-in-seconds: 2
+  server:
+    # 测试时关闭自我保护机制，保证不可用服务及时踢出 下面文档会详细介绍自我保护机制
+    # eureka 挂了怎么办???
+    enable-self-preservation: false
