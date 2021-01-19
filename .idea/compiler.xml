@@ -6,16 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-cloud-eureka-client" />
-        <module name="spring-cloud-eureka-server" />
-        <module name="spring-cloud-ribbon" />
-        <module name="spring-cloud-eureka-feign" />
+        <module name="mingrui-shop-basic-upload-server" />
+        <module name="mingrui-shop-service-api-xxx" />
+        <module name="mingrui-shop-basics-eureka-server" />
+        <module name="mingrui-shop-basic-zuul-server" />
+        <module name="mingrui-shop-common-core" />
+        <module name="mingrui-shop-service-xxx" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="spring-cloud-eureka-client" target="1.8" />
+      <module name="spring-cloud-eureka-feign" target="1.8" />
+      <module name="spring-cloud-eureka-server" target="1.8" />
+      <module name="spring-cloud-ribbon" target="1.8" />
+      <module name="springCloud111" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mingrui-shop-basic-upload-server" options="-parameters" />
+      <module name="mingrui-shop-basic-zuul-server" options="-parameters" />
+      <module name="mingrui-shop-basics" options="-parameters" />
+      <module name="mingrui-shop-basics-eureka-server" options="-parameters" />
+      <module name="mingrui-shop-common-core" options="-parameters" />
+      <module name="mingrui-shop-commons" options="-parameters" />
+      <module name="mingrui-shop-service" options="-parameters" />
+      <module name="mingrui-shop-service-api-xxx" options="-parameters" />
+      <module name="mingrui-shop-service-xxx" options="-parameters" />
       <module name="spring-cloud-eureka-client" options="-parameters" />
       <module name="spring-cloud-eureka-feign" options="-parameters" />
       <module name="spring-cloud-eureka-server" options="-parameters" />
