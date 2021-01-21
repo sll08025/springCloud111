@@ -30,5 +30,9 @@ public interface CategoryService {
     @PostMapping(value = "/category/save")
     Result<JsonObject>addCategoryById(@Validated({MingruiOperation.Add.class}) @RequestBody CategoryEntity categoryEntity);
 
+    @ApiOperation(value = "通过id删除分类")
+    @DeleteMapping(value = "/category/delete")
+    Result<JsonObject>deleteCategoryById(Integer id);
+
 
 }
